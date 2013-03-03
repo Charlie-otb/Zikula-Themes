@@ -1,0 +1,81 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-02-12 11:45+0000\n"
+"PO-Revision-Date: 2010-02-18 13:12+0200\n"
+"Last-Translator: Gilles <gilles@pilloud.fr>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Pootle 2.0.1\n"
+
+#: version.php:4
+msgid "Picasso"
+msgstr "Picasso"
+
+#: version.php:5
+msgid "Picasso theme for Zikula"
+msgstr "Thème Picasso pour Zikula"
+
+#: templates/includes/footer.htm:7
+msgid "Terms of use"
+msgstr "Termes d'utilisation  "
+
+#: templates/includes/footer.htm:8
+msgid "Privacy policy"
+msgstr "Politique de confidentialité"
+
+#: templates/includes/footer.htm:9
+msgid "Accessibility statement"
+msgstr "Politique d'accessibilité"
+
+#: templates/admin.htm:29 templates/master.htm:29 templates/home.htm:28
+#: templates/forum.htm:29
+msgid "Submit"
+msgstr "Soumettre"
+
+#: templates/admin.htm:37 templates/master.htm:37 templates/home.htm:36
+#: templates/forum.htm:37
+msgid "Home"
+msgstr "Accueil"
+
+#: templates/admin.htm:38 templates/master.htm:38 templates/home.htm:37
+#: templates/forum.htm:38
+msgid "Pages"
+msgstr "Pages"
+
+#: templates/admin.htm:39 templates/master.htm:39 templates/home.htm:38
+#: templates/forum.htm:39
+msgid "News"
+msgstr "Nouvelles"
+
+#: templates/admin.htm:40 templates/master.htm:40 templates/home.htm:39
+#: templates/forum.htm:40
+msgid "Forum"
+msgstr "Forum"
+
+#: templates/admin.htm:41 templates/master.htm:41 templates/home.htm:40
+#: templates/forum.htm:41
+msgid "Contact"
+msgstr "Contact"
+
+#: templates/modules/News/news_user_index.htm:2
+#: templates/modules/News/news_user_articlecontent.htm:4
+msgid "Posted by"
+msgstr "Soumis par"
+
+#: templates/modules/News/news_user_articlecontent.htm:2
+msgid "Filed under"
+msgstr "Classé sous"
+
+#: templates/modules/News/news_user_articlecontent.htm:4
+msgid "on"
+msgstr "sur"

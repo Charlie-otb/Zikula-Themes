@@ -1,0 +1,5 @@
+"Picasso" "was originally designed by René Hornig (http://www.renehornig.com) and
+converted into a Zikula theme by Charlie (http://www.postnuke-themes.de).
+
+The CSS, XHTML and design is released under Creative Commons Attribution 3.0:
+http://creativecommons.org/licenses/by/3.0/
