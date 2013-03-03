@@ -7,7 +7,7 @@
         <meta name="keywords" content="{$metatags.keywords}" />
         <meta http-equiv="X-UA-Compatible" content="chrome=1" />
         {pageaddvar name="stylesheet" value="$stylepath/style.css" media="print,projection,screen"}
-<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<!--[pnmodurl modname='News' type='user' func='main' theme='RSS']-->" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="{pnmodurl modname='News' type='user' func='main' theme='RSS'}" />
 {browserhack condition="if IE 8" assign="ieconditional"}<link rel="stylesheet" href="themes/Picasso/style/style_ie.css" type="text/css" media="screen" />{/browserhack}
 </head>
 <body>
@@ -16,14 +16,14 @@
             <div id="header" class="z-clearfix">
                 <!-- logo -->
                 <div id="logo">
-                    <h1><a href="<!--[homepage]-->"><!--[sitename]--></a></h1>
-                    <h2><!--[slogan]--></h2>
+                    <h1><a href="{homepage}">{sitename}</a></h1>
+                    <h2>{slogan}</h2>
                 </div>
                 <!-- / logo -->
 
                 <!-- search -->
                 <div id="search" class="z-clearfix">
-                    <form method="post" id="searchform" action="{pnmodurl modname=Search}">
+                    <form method="post" id="searchform" action="{modurl modname=Search}">
                         <p><label for="search">search</label><input type="text" value="" name="q" id="search_question" class="search_input" tabindex="1" />
                             <input type="hidden" name="overview" value="1" />
                             <input type="hidden" name="bool" value="AND" />
