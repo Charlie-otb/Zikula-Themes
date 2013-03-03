@@ -1,0 +1,73 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: theme_emplode\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-01-01 23:49+0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Karl Pütz <Charlie@cmods-dev.de>\n"
+"Language-Team: Charlie <Charlie@postnuke-themes.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED KINGDOM\n"
+
+#: version.php:4
+msgid "enplode"
+msgstr "emplode"
+
+#: version.php:5
+msgid "emplode theme"
+msgstr "emplode Theme Template by Arscin"
+
+#: templates/admin.htm:26
+#: templates/admin.htm:38
+#: templates/master.htm:25
+#: templates/master.htm:37
+#: templates/home.htm:25
+#: templates/home.htm:37
+msgid "Home"
+msgstr "Home"
+
+#: templates/admin.htm:26
+#: templates/admin.htm:39
+#: templates/master.htm:25
+#: templates/master.htm:38
+#: templates/home.htm:25
+#: templates/home.htm:38
+msgid "Downloads"
+msgstr "Downloads"
+
+#: templates/admin.htm:26
+#: templates/admin.htm:40
+#: templates/master.htm:25
+#: templates/master.htm:39
+#: templates/home.htm:25
+#: templates/home.htm:39
+msgid "Forum"
+msgstr "Forum"
+
+#: templates/admin.htm:41
+#: templates/master.htm:40
+#: templates/home.htm:40
+msgid "Contact"
+msgstr "Contact"
+
+#: templates/modules/News/news_user_index.htm:4
+msgid "Posted by"
+msgstr "Posted by:"
+
+#: templates/modules/News/news_user_index.htm:4
+#: templates/modules/News/news_user_articlecontent.htm:10
+msgid "Posted on"
+msgstr "on:"
+
+#: templates/modules/News/news_user_index.htm:8
+#: templates/modules/News/news_user_articlecontent.htm:16
+msgid "Filed under"
+msgstr "Filed under:"
+
+#: templates/modules/News/news_user_articlecontent.htm:10
+msgid "Posted by "
+msgstr "Posted by:"
+

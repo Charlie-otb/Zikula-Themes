@@ -1,0 +1,13 @@
+Theme emplode
+Anleitung:Dieses Theme hat im footerbereich 3 Blöcke.
+		  Diese Blöcke müßt Ihr in der Blockkonfiguration anlegen.
+		  Geht also zu http://eure Seite/index.php?module=Blocks&type=admin&func=newposition
+		  und legt dort die 3 Blockpostitionen fest die da heissen:
+		  footleft
+		  footcenter
+		  footright
+		  Danach könnt Ihr in der Blockadmin die Blöcke dann erstellen.
+		  
+Viel Spass mit emplode
+
+Gruß Charlie

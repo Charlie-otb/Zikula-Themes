@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Zikula 1.2.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-01-01 23:49+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: version.php:4
+msgid "enplode"
+msgstr ""
+
+#: version.php:5
+msgid "emplode theme"
+msgstr ""
+
+#: templates/admin.htm:26 templates/admin.htm:38 templates/master.htm:25
+#: templates/master.htm:37 templates/home.htm:25 templates/home.htm:37
+msgid "Home"
+msgstr ""
+
+#: templates/admin.htm:26 templates/admin.htm:39 templates/master.htm:25
+#: templates/master.htm:38 templates/home.htm:25 templates/home.htm:38
+msgid "Downloads"
+msgstr ""
+
+#: templates/admin.htm:26 templates/admin.htm:40 templates/master.htm:25
+#: templates/master.htm:39 templates/home.htm:25 templates/home.htm:39
+msgid "Forum"
+msgstr ""
+
+#: templates/admin.htm:41 templates/master.htm:40 templates/home.htm:40
+msgid "Contact"
+msgstr ""
+
+#: templates/modules/News/news_user_index.htm:4
+msgid "Posted by"
+msgstr ""
+
+#: templates/modules/News/news_user_index.htm:4
+#: templates/modules/News/news_user_articlecontent.htm:10
+msgid "Posted on"
+msgstr ""
+
+#: templates/modules/News/news_user_index.htm:8
+#: templates/modules/News/news_user_articlecontent.htm:16
+msgid "Filed under"
+msgstr ""
+
+#: templates/modules/News/news_user_articlecontent.htm:10
+msgid "Posted by "
+msgstr ""
