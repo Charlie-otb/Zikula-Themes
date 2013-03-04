@@ -1,0 +1,528 @@
+/**
+ * Screen layout styles
+ *
+ * @copyright       Copyright 2005-2010, Dirk Jesse
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
+ * @link            http://www.yaml.de
+ */
+
+/**
+ * Zikula BlankTheme Adaptation
+ * @link            http://www.blanktheme.org
+ *
+ * @author          Mateo Tibaquira
+ * @link            http://www.nestormateo.com
+ * @author          Erik Spaan
+ * @link            http://www.erikspaan.nl
+ * @author          Dave Pahl
+ * @link            http://www.dpahl.com
+ * @version         $Id: basemod.css 486 2010-09-20 23:42:32Z mateo $
+ */
+
+/**
+ * CSS Table of Contents
+ *
+ *  Global fixes (layout-global)
+ *  Design of the layout (layout-basics)
+ *     Layout Elements (layout-elements)
+ *     Navigation menu adjustments (layout-navigation)
+ *     Miscelaneous (layout-misc)
+ *  Specific templates and zones (layout-templates)
+ */
+
+@media screen, projection
+{
+  /**
+   * Global fixes
+   * 
+   * @section layout-global
+   */
+
+  /* Centering layout in old IE-versions */
+  body { 
+    text-align: center; 
+  }
+
+  .page_margins { 
+    text-align: left; 
+  }
+
+  .bt_zone { 
+    clear: both;
+    display: block;
+    overflow: hidden;
+  }
+
+
+
+  /**
+   * Design of the layout
+   * Layout: width, background, borders of the main containers
+   * 
+   * @section layout-basics
+   */
+
+
+  /**
+   * Layout elements
+   * @subsection layout-elements
+   */
+
+  /* marginal area */
+  body {
+    background: #4d87c7 url(../../images/design/bg_blue.gif) repeat-x top left fixed;
+    padding: 10px 0; /* to-remove */
+  }
+
+  /* skiplinks */
+  #skiplinks a.skip:focus,
+  #skiplinks a.skip:active {
+    background: #333;
+    border-bottom: 1px #000 solid;
+    color: #fff;
+    padding: 10px 0;
+    text-decoration: none;
+  }
+
+  /* general wrapper */
+  .page_margins {
+    border: 0px #889 solid;  /* to-remove */
+    margin: 0 auto;
+
+    width: 980px;
+    min-width: 980px;
+    max-width: 80em;
+  }
+
+  /* page wrapper */
+  .page {
+    background: #fff;
+    border: 10px #fff solid; /* to-remove */
+  }
+
+      /* header */
+      #header {
+        /*background: #fff url(../../images/design/bg_header.gif) repeat-x top left;*/
+        padding: 0 20px; /* do not use top/bottom paddings with fixed height */
+        height: 110px;
+        /*z-index: 100;*/ /* when the navigation is placed inside the header and a multi level menu is used this is needed for ie */
+      }
+
+          /* top navigation container */
+          #header #topnav {
+            background: transparent;
+          }
+
+          /* title and slogan */
+          #header h1 {
+            margin: 37px 0 0.25em 20px;
+          }
+          #header .slogan {
+            float: left;
+          }
+
+          /* logo */
+          #header .logo {
+            float: left;
+            margin: 30px 12px 0 0;
+          }
+
+      /* adjustment of main navigation */          
+      #nav ul {
+        margin-left: 20px;
+      }
+
+      /* content wrapper */      
+      #main {
+        padding: 1em 0;
+      }
+
+      /* footer */
+      #footer { 
+        background: #efefef; 
+        border-top: 5px #dfdfdf solid; /* to-remove */
+        padding: 12px 15px;
+      }
+
+
+  /**
+   * Navigation menu adjustments
+   * @subsection layout-navigation
+   */
+
+  #bt_topnavlinks {
+    float: left;
+  }
+
+  #bt_topnavlinks ul {
+    float: left;
+    list-style: none;
+    margin: 0 0.5em 0 0;
+    padding: 0;
+  }
+
+  #bt_topnavlinks li {
+    border-right: 1px solid #ddd;
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  #bt_topnavlinks li.bt_last {
+    border-right: none;
+  }
+
+  #bt_topnavlinks li a {
+    display: block;
+    float: left;
+    height: 1.4em;
+    line-height: 1.4em;
+    padding: 0 0.5em;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  #nav_main {
+    background: #efefef url(../../yaml/navigation/images/shiny_buttons/background.png) repeat-x; /* to-remove */
+    border: none;
+    display: inline;
+    float: left;
+    overflow: visible;
+    width: 100%;
+  }
+
+  #nav_main ul {
+    border: none;
+    display: inline;
+    float: left;
+    list-style: none;
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+  }
+
+  #nav_main ul li {
+    border: none;
+    border-right: 1px solid #aaa; /* to-remove */
+    display: inline;
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #nav_main ul li a,
+  #nav_main ul li strong {
+    background: transparent;
+    color: #333;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    margin: 0;
+    padding: 8px 16px;
+    text-decoration: none;
+    width: auto;
+  }
+
+  #nav_main ul li a:focus,
+  #nav_main ul li a:hover,
+  #nav_main ul li a:active {
+    background: #3b69ad;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #nav_main ul li#current {
+    background: #4d87c7;
+    border: none; /* to-remove */
+  }
+
+  #nav_main ul li#current strong,
+  #nav_main ul li#current a,
+  #nav_main ul li#current a:focus,
+  #nav_main ul li#current a:hover,
+  #nav_main ul li#current a:active {
+    background: transparent;
+    color: #fff;
+    font-weight: bold;
+  }
+
+
+  /**
+   * Miscellaneous
+   * @subsection layout-misc
+   */
+
+  /* default content paddings */
+  #col1_content,
+  #col2_content,
+  #col3_content {
+    padding: 0 10px;
+  }
+
+  /* cool subcolumns style */  
+  .coolsubcol {
+    background: #f9f9f9;
+    border-top: 2px #efefef solid;
+    color: #666; 
+    padding-top: 15px;
+  }
+  .coolsubcol .subcl {
+    padding: 0 0 0 10px;
+  }
+  .coolsubcol .subc {
+    padding: 0 5px 0 5px;
+  }
+  .coolsubcol .subcr {
+    padding: 0 10px 0 0;
+  }
+
+
+
+  /**
+   * Specific templates and zones
+   * 
+   * @section layout-templates
+   */
+
+  /* Example: #col1 style for the -grid- template and the -123- layout */
+  .bt_grid .bt_123 #col1 {
+    width: 25%; /* width does not affect grid template, don't worry ;-) */
+  }
+
+
+
+  /**
+   * 2col template
+   * x1 is the default distribution
+   * @subsection layout-template-2col
+   */
+
+  /* #col1 is the main column */
+  .bt_2col #col1 {
+    float: none;
+    margin-left: 25%;
+    width: auto;
+  }
+  .bt_2col #col1_content {
+    padding: 0 10px;
+  }
+
+  /* #col2 and #col3 contains side blocks */
+  .bt_2col #col2,
+  .bt_2col #col3 {
+    float: left;
+    margin: 0;
+    width: 25%;
+  }
+  .bt_2col #col2_content {
+    padding: 0 10px 0 15px;
+  }
+  .bt_2col #col3_content {
+    padding: 0 15px 0 10px;
+  }
+
+
+  /* 1X layouts */
+  .bt_2col .bt_12 #col1,
+  .bt_2col .bt_13 #col1 {
+    border-right: 1px dashed #DDDDDD; /* to-remove */
+    margin-left: 0;
+    margin-right: 25%;
+  }
+  .bt_2col .bt_12 #col2,
+  .bt_2col .bt_13 #col3 {
+    float: right;
+    margin-left: -5px;
+  }
+  /* padding changes */
+  .bt_2col .bt_12 #col2_content {
+    padding: 0 15px 0 10px;
+  }
+
+
+  /* X1 layouts */
+  .bt_2col .bt_21 #col1,
+  .bt_2col .bt_31 #col1 {
+    border-left: 1px dashed #DDDDDD; /* to-remove */
+  }
+  .bt_2col .bt_31 #col3_content {
+    padding: 0 10px 0 15px;
+  }
+
+
+  /* 1 layout */
+  /* full main column */
+  .bt_2col .bt_1 #col1 {
+    margin: 0;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .bt_2col .bt_1 #col1_content {
+    padding: 0 10px;
+  }
+
+
+
+  /**
+   * 3col template
+   * 123 is the default layout
+   * @subsection layout-template-3col
+   */
+
+  /* #col1 is the main column */
+  .bt_3col #col1 {
+    float: left;
+    margin: 0;
+    width: 520px;
+  }
+  .bt_3col #col1_content {
+    padding: 0 10px;
+  }
+
+  /* #col2 contains the left blocks */
+  .bt_3col #col2 {
+    float: left;
+    margin: 0;
+    width: 220px;
+  }
+  .bt_3col #col2_content {
+    padding: 0 5px 0 10px;
+  }
+
+  /* #col3 contains the right blocks */
+  .bt_3col #col3 {
+    float: right;
+    margin: 0;
+    width: 220px;
+  }
+  .bt_3col #col3_content {
+    padding: 0 10px 0 5px;
+  }
+
+
+  /* 213 layout */
+  .bt_3col .bt_213 #col1 {
+    margin-left: 220px; /* col2 width */
+  }
+  .bt_3col .bt_213 #col2 {
+    margin-left: -740px; /* col1 + col2 widths */
+  }
+  .bt_3col .bt_213 #col3 {
+    margin-left: -5px;
+  }
+
+
+  /* 312 layout */
+  .bt_3col .bt_312 #col1 {
+    margin-left: 220px; /* col3 width */
+  }
+  .bt_3col .bt_312 #col2 {
+    float: right;
+    margin-left: -5px;
+  }
+  .bt_3col .bt_312 #col3 {
+    float: left;
+    margin-left: -740px; /* col1 + col2 widths */
+  }
+
+
+  /* 132 layout */
+  .bt_3col .bt_132 #col2 {
+    float: right;
+    margin-left: -5px;
+  }
+  .bt_3col .bt_132 #col3 {
+    float: left;
+  }
+
+
+  /* XX1 layouts */
+  .bt_3col .bt_231 #col1,
+  .bt_3col .bt_321 #col1 {
+    float: right;
+    margin-left: -5px;
+  }
+  .bt_3col .bt_321 #col2 {
+    float: right;
+  }
+
+
+  /* padding adjustments */
+  .bt_3col .bt_123 #col2_content,
+  .bt_3col .bt_321 #col2_content,
+  .bt_3col .bt_132 #col3_content,
+  .bt_3col .bt_231 #col3_content {
+    padding: 0 5px;
+  }
+  .bt_3col .bt_132 #col2_content,
+  .bt_3col .bt_312 #col2_content {
+    padding: 0 10px 0 5px;
+  }
+  .bt_3col .bt_321 #col3_content,
+  .bt_3col .bt_312 #col3_content {
+    padding: 0 5px 0 10px;
+  }
+
+
+
+  /**
+   * 3col231 template
+   * 213 is the default layout
+   * @subsection layout-template-3col231
+   */
+
+  /* #col1 is the main column */
+  .bt_3col231 #col1 {
+    border-left: 1px dashed #DDDDDD; /* to-remove */
+    border-right: 1px dashed #DDDDDD; /* to-remove */
+    float: none;
+    margin-left: 25%; /* leftcol width*/
+    margin-right: 25%; /* rightcol width*/
+    width: auto;
+  }
+  .bt_3col231 #col1_content {
+    padding: 0 10px;
+  }
+
+  /* #col2 contains the left blocks */
+  .bt_3col231 #col2 {
+    float: left;
+    margin: 0;
+    width: 25%;
+  }
+  .bt_3col231 #col2_content {
+    padding: 0 10px 0 15px;
+  }
+
+  /* #col3 contains the right blocks */
+  .bt_3col231 #col3 {
+    float: right;
+    margin: 0;
+    width: 25%;
+  }
+  .bt_3col231 #col3_content {
+    padding: 0 15px 0 10px;
+  }
+
+
+  /* 312 layout */
+  .bt_3col231 .bt_312 #col2 {
+    float: right;
+    margin-left: -5px;
+  }
+  .bt_3col231 .bt_312 #col2_content {
+    padding: 0 15px 0 10px;
+  }
+  .bt_3col231 .bt_312 #col3 {
+    float: left;
+  }
+  .bt_3col231 .bt_312 #col3_content {
+    padding: 0 10px 0 15px;
+  }
+
+}

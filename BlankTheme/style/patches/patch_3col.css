@@ -1,0 +1,18 @@
+/**
+ * IE-Patch stylesheet for 3col template
+ *
+ * @copyright       Copyright 2005-2007, Dirk Jesse
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
+ * @link            http://www.yaml.de
+ * @version         $Id: patch_3col.css 217 2008-07-21 16:43:48Z mateo $
+ */
+
+/* Layout-independent adjustments */
+@import url(../../yaml/core/slim_iehacks.css);
+
+/* Layout-dependent adjustments */
+@media screen, projection
+{
+
+}

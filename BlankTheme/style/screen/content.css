@@ -1,0 +1,708 @@
+/**
+ * Content elements styles
+ *
+ * @copyright       Copyright 2005-2010, Dirk Jesse
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
+ * @link            http://www.yaml.de
+ */
+
+/**
+ * Zikula BlankTheme adaptation
+ * @link            http://www.blanktheme.org
+ *
+ * @author          Mateo Tibaquira
+ * @link            http://www.nestormateo.com
+ * @author          Erik Spaan
+ * @link            http://www.erikspaan.nl
+ * @author          Dave Pahl
+ * @link            http://www.dpahl.com
+ * @version         $Id: content.css 486 2010-09-20 23:42:32Z mateo $
+ */
+
+/**
+ * CSS Table of Contents
+ *
+ *  Global elements (content-global)
+ *  General layout elements (content-layout)
+ *  Links (content-links)
+ *  Tables (content-tables)
+ *  Generic content classes (content-generic-classes)
+ *  Theme specific styles (content-theme-specific)
+ *  Zikula Specific styles (content-zikula-specific)
+ *     Fixes (content-zikula-fixes)
+ *     Core styles (content-zikula-core)
+ *     Value Addons (content-zikula-addons)
+ *     Zikula Blocks (content-zikula-blocks)
+ *     Miscelaneous (content-zikula-misc)
+ *     Specific Zikula Zones (content-zikula-zones)
+ */
+
+@media all
+{
+  /**
+   * Global elements
+   * standar html elements styles
+   * 
+   * @section content-global
+   */
+
+  /* reset font size for all elements to standard (16 pixel) */
+  html * { font-size: 100.01%; }
+
+  /* reset monospaced elements to font size 16px in Gecko browsers */
+  textarea, pre, code, kbd, samp, var, tt {
+    font-family: Consolas, "Lucida Console", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier;
+  }
+
+  /* base layout gets standard */
+  body {
+    color: #444;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 75.00%; /* font size 12px */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #666;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    margin: 0 0 0.25em 0;
+  }
+
+  h1 {
+    font-size: 200%; /* 24px */
+  }
+  h2 {
+    color: #182E7A;
+    font-size: 200%; /* 24px */
+  }
+  h3 {
+    font-size: 150%; /* 18px */
+  }
+  h4 {
+    font-size: 133.33%; /* 16px */
+  }
+  h5 {
+    font-size: 116.67%; /* 14px */
+  }
+  h6 {
+    font-size: 116.67%; /* 14px */
+    font-style: italic;
+  }
+
+  /* Lists */
+
+  ul, ol, dl {
+    line-height: 1.5em;
+    margin: 0 0 1em 1em;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+  ul ul {
+    list-style-type: circle;
+    margin-bottom: 0;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+  ol ol {
+    list-style-type: lower-latin;
+    margin-bottom: 0;
+  }
+
+  li {
+    line-height: 1.5em;
+    margin-left: 0.8em;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+  dd {
+    margin: 0 0 1em 0.8em;
+  }
+
+  /* text formatting */
+
+  p {
+    line-height: 1.5em;
+    margin: 0 0 1em 0;
+  }
+
+  cite, blockquote, q {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: italic
+  }
+  blockquote {
+    margin: 0 0 1em 1.6em;
+  }
+
+  strong, b {
+    font-weight: bold;
+  }
+  em, i {
+    font-style: italic;
+  }
+
+  pre {
+    line-height: 1.5em;
+    margin: 0 0 1em 0;
+  }
+  pre, code, kbd, tt, samp, var {
+    font-size: 100%;
+  }
+  pre, code {
+    color: #800;
+  }
+  kbd, samp, var {
+    color: #666;
+    font-weight: bold;
+  }
+  var, dfn {
+    font-style: italic;
+  }
+
+  acronym, abbr {
+    border-bottom: 1px #aaa dotted;
+    cursor: help;
+    font-variant: small-caps;
+    letter-spacing: .07em;
+  }
+
+  sub, sup {
+    font-size: 91.6667%;
+    line-height: 0;
+  }
+
+  hr {
+    color: #fff;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px #eee solid;
+    margin: 0 0 0.5em 0;
+    padding: 0 0 0.5em 0;
+  }
+
+  /* images (with optional captions) */
+
+  p.icaption_left {
+    display: inline;
+    float: left;
+    margin: 0 1em 0.15em 0;
+  }
+  p.icaption_right {
+    display: inline;
+    float: right;
+    margin: 0 0 0.15em 1em;
+  }
+
+  p.icaption_left img,
+  p.icaption_right img {
+    border: 1px #888 solid;
+    padding: 0;
+  }
+
+  p.icaption_left strong,
+  p.icaption_right strong {
+    background: #eee;
+    display: block;
+    font-size: 91.667%;
+    font-weight: normal;
+    margin-top: 2px;
+    overflow: hidden;
+    padding: 0.3em 0.5em;
+  }
+
+  /* Miscellaneous */
+
+  a img,
+  button img {
+    vertical-align: middle;
+  }
+
+  fieldset {
+    border: 1px solid #D9DAD5;
+    padding: 5px 10px 10px;
+  }
+
+
+
+  /**
+   * General layout elements
+   * styles for the main containers and some of its specific contents
+   * 
+   * @section content-layout
+   */
+
+  #header h1 {
+    color: #000;
+    font-size: 36px;
+    letter-spacing: -1px;
+    line-height: 65%;
+  }
+
+  #header .slogan {
+    color: #999;
+    font-size: 16px;
+  }
+
+    #topnav {
+      color: #aaa;
+      font-size: 12px;
+    }
+
+  #footer {
+    color: #666;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: left;
+  }
+
+
+
+  /**
+   * Links
+   * Formatting of hyperlinks
+   * 
+   * @section content-links
+   */
+
+  /* general links */
+  a {
+    background: transparent;
+    color: #4D87C7;
+    text-decoration: none;
+  }
+  a:visited {
+    color: #036;
+  }
+  a:focus {
+    background: #fff;
+    color: #000;
+    text-decoration: underline;
+  }
+  a:hover,
+  a:active {
+    color: #182E7A;
+    outline: 0 none;
+    text-decoration: underline;
+  }
+
+  /* top navigation links */
+  #topnav a {
+    color: #999;
+    background: transparent;
+    font-weight: normal;
+    text-decoration: none;
+  }
+  #topnav a:focus, 
+  #topnav a:hover,
+  #topnav a:active {
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  /* title link */
+  #header h1 a:focus, 
+  #header h1 a:hover,
+  #header h1 a:active {
+    text-decoration: none;
+  }
+
+  /* footer links */
+  #footer a {
+    background: transparent;
+    color: #999;
+    font-weight: bold;
+  }
+  #footer a:focus, 
+  #footer a:hover,
+  #footer a:active {
+    background: transparent;
+    color: #4D87C7;
+    text-decoration: underline;
+  }
+
+
+
+  /**
+   * Emphasizing external Hyperlinks via CSS
+   * 
+   * @section             content-external-links
+   * @app-yaml-default    disabled
+   */
+
+  /*
+  #main a[href^="http://www.my-domain.com"],
+  #main a[href^="https://www.my-domain.com"]
+  {
+    background-image: url('../../images/icons/ext_link.gif');
+    background-position: 0 0.45em;
+    background-repeat: no-repeat;
+    padding-left: 12px;
+  }
+  */
+
+
+
+  /**
+   * Tables
+   * Generic classes for table-width and design definition
+   * 
+   * @section content-tables
+   */
+
+  table {
+    border-collapse: collapse;
+    margin-bottom: 0.5em;
+    /*width: auto;*/
+  }
+  table caption {
+    font-variant: small-caps;
+  }
+  table.full,
+  table.pn-datatable {
+    width: 100%;
+  }
+  table.fixed {
+    table-layout: fixed;
+  }
+
+  th,td {
+    padding: 0.5em;
+  }
+  thead th {
+    color: #000;
+  }
+  tbody th {
+    background: #e0e0e0;
+    color: #333;
+  }
+  tbody th[scope="row"], tbody th.sub {
+    background: #f0f0f0;
+  }
+
+  tbody th {
+    /*border-bottom: 1px solid #fff;*/
+    text-align: left;
+  }
+  tbody td {
+    /*border-bottom: 1px solid #eee;*/
+  }
+
+  tbody tr:hover th[scope="row"],
+  tbody tr:hover tbody th.sub {
+    background: #d9e9d9;
+  }
+  tbody tr:hover td {
+    background: #e9f9e9;
+  }
+
+  thead th a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+
+
+  /**
+   * Generic Content Classes
+   * standard classes for positioning and highlighting
+   * 
+   * @section content-generic-classes
+   */
+
+  .highlight {
+    color: #c30;
+  }
+  .dimmed {
+    color: #888;
+  }
+
+  .info {
+    background: #f8f8f8;
+    color: #666;
+    font-size: 91.7%;
+    margin-bottom: 0.5em;
+    padding: 10px;
+  }
+
+  .note {
+    background: #efe;
+    border: 1px #484 solid;
+    color: #040;
+    margin-bottom: 1em;
+    padding: 10px;
+  }
+  .important {
+    background: #ffe;
+    border: 1px #884 solid;
+    color: #440;
+    margin-bottom: 1em;
+    padding: 10px;
+  }
+  .warning {
+    background: #fee;
+    border: 1px #844 solid;
+    color: #400;
+    margin-bottom: 1em;
+    padding: 10px;
+  }
+
+  .text_left {
+    text-align: left;
+  }
+  .text_right {
+    text-align: right;
+  }
+
+  .float_left {
+    display: inline;
+    float: left;
+    margin-bottom: 0.15em;
+    margin-right: 1em;
+  }
+  .float_right {
+    display: inline;
+    float: right;
+    margin-bottom: 0.15em;
+    margin-left: 1em;
+  }
+  .center {
+    display: block;
+    margin: 0.5em auto;
+    text-align: center;
+  }
+
+  .content_separator {
+    border-bottom: 1px solid #DDDDDD;
+    display: block;
+    margin: 22px 0 18px;
+  }
+  .text_separator {
+    color: #BBBBBB;
+    padding: 0 2px;
+  }
+
+
+
+  /**
+   * Theme specific styles
+   * general styles defined by the theme
+   * 
+   * @section content-theme-specific
+   */
+
+  /* efa font resize styles, if not used comment out */
+  .fontresize-large,
+  .fontresize-reset, 
+  .fontresize-small {
+    width: 16px;
+    height: 16px;
+    padding: 3px 0;
+  }
+  .fontresize-large { 
+    background: url(../../images/icons/font_resize.gif) no-repeat 0px 50%;
+  }
+  .fontresize-reset { 
+    background: url(../../images/icons/font_resize.gif) no-repeat -20px 50%;
+  }
+  .fontresize-small { 
+    background: url(../../images/icons/font_resize.gif) no-repeat -40px 50%;
+  }
+
+  /* Special styles for entries or menus ... */
+  .post {
+  }
+  .menu {
+  }
+
+
+
+  /**
+   * Zikula specific styles
+   * styles to be used in the Zikula templates
+   * 
+   * @section content-zikula-specific
+   */
+
+
+  /**
+   * Fixes
+   * @subsection content-zikula-fixes
+   */
+
+  /* js context menus */
+  #bt_wikula .bt_func_edit #col1_content,
+  #bt_wikula .bt_func_edit #pn-maincontent,
+  #bt_content.bt_type_edit #col1_content,
+  #bt_content.bt_type_edit #pn-maincontent {
+    position: inherit;
+  }
+  div.contextMenu ul li {
+    margin-left: 0px;
+  }
+
+  /* jsCalendar */
+  .calendar {
+    z-index: 100;
+  }
+    .calendar tr.daysrow td.hilite {
+      font-weight: bold;
+    }
+
+  /* Scribite */
+  #main .htmlarea {
+    border: 1px solid #DDDDDD;
+  }
+  /* openwysiwyg fix*/
+  .tableTextareaEditor th,
+  .tableTextareaEditor td {
+    padding: 0;
+  }
+  .tableTextareaEditor span {
+    margin: 0;
+  }
+
+
+  /**
+   * Core styles overrides
+   * @subsection content-zikula-core
+   */
+
+  /* z-pager */
+  .z-pager {
+    color: #999;
+  }
+    .z-pager a:hover {
+      text-decoration: none;
+    }
+
+  /* main content */
+  #pn-maincontent {
+    display: block;
+    position: relative;
+  }
+
+
+  /**
+   * Value Addons styles
+   * @subsection content-zikula-addons
+   */
+  
+  /* News Articles */
+  .news_index {
+    padding: 5px 0px 10px 0px;
+  }
+  .news_index h2 {
+    margin: 0;
+    padding: 2px 0px;
+  }
+  .news_index .news_hometext,
+  .news_index .news_hometext p {
+    line-height: 1.5em;
+  }
+  .news_index .news_hometext p {
+    margin: 0;
+  }
+  .news_index_date {
+    color: #AAA;
+  }
+  .news_title {
+    margin-top: 10px;
+  }
+  .news_body,
+  .news_body p {
+    line-height: 1.5em;
+  }
+  .news_categories {
+    border-top: 1px solid #EFEFEF;
+    margin-top: 1em; /* optional */
+    text-align: right;
+  }
+  #news_topic {
+    float: right;
+  }
+
+  /* Ratings hook */
+  #ratingsratecontent p {
+    margin: 0;
+  }
+
+
+  /**
+   * Zikula Blocks
+   * @subsection content-zikula-blocks
+   */
+
+  /* General Blocks styles */
+  .pn-block {
+    margin-bottom: 15px;
+  }
+  .pn-block .pn-block-title {
+    font-weight: 700;
+    line-height: 22px;
+    margin: 0;
+    padding: 3px 4px;
+  }
+  .pn-block .pn-block-content {
+    padding: 5px;
+  }
+  .pn-block ul,
+  .pn-block ol,
+  .pn-block dl {
+    margin: 0px;
+  }
+
+  /* Top Navigation Blocks */
+  .pn-blockposition-navtop {
+    margin-bottom: 0px;
+  }
+
+  /* Right Blocks */
+  .pn-blockposition-right {
+  }
+  .pn-blockposition-right h4 {
+  }
+
+  /* Center Blocks */
+  .pn-blockposition-center {
+  }
+
+
+  /**
+   * Miscelaneous styles
+   * @subsection content-zikula-misc
+   */
+
+  /* digger plugin */
+  .diggers {
+    background: #fff;
+    /*border-top: 1px solid #EFEFEF;*/
+    margin: 0px;
+    /*margin-top: 1em; */
+    padding: 2px;
+    text-align: right;
+  }
+
+  .diggers a {
+    background: none no-repeat bottom left ! important;
+    margin-left: 5px;
+    padding-left: 0 ! important;
+  }
+
+
+  /**
+   * Specific Zikula Zones
+   * @subsection content-zikula-zones
+   */
+
+  /* Example: Homepage main container */
+  .bt_home #main {
+    /*padding: 10px 0;*/
+  }
+
+}
