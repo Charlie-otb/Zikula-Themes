@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Zikula 1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-12-25 14:22-0500\n"
+"PO-Revision-Date: 2012-12-25 19:37+0100\n"
+"Last-Translator: Charlie-otb <charlie@postnuke-themes.de>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: version.php:3
+msgid "rs19"
+msgstr "rs19"
+
+#: version.php:4
+msgid "rs19 theme for Zikula"
+msgstr "Theme für Zikula ab 1.3.x"
+
+#: templates/includes/header.tpl:25
+msgid "Home"
+msgstr "Home"
+
+#: templates/includes/header.tpl:26
+msgid "Contact"
+msgstr "Kontakt"
+
+#: templates/includes/header.tpl:27
+msgid "Forum"
+msgstr "Forum"
+
+#: templates/includes/header.tpl:28
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: templates/includes/header.tpl:29
+msgid "Downloads"
+msgstr "Downloads"
+
+#: templates/modules/News/user/index.tpl:15
+msgid "by"
+msgstr "von"
+
+#: templates/modules/News/user/index.tpl:25
+#: templates/modules/News/user/index.tpl:27
+#, php-format
+msgid "Picture %1$s for %2$s"
+msgstr "Bild %1$svon %2$s"
