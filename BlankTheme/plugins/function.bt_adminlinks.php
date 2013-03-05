@@ -113,7 +113,7 @@ function smarty_function_bt_adminlinks($params, &$smarty)
                     array(
                         array(null, __('Modules', $dom),            ModUtil::url('Modules', 'admin'),
                             array(
-                                array(null, __('System hooks', $dom), ModUtil::url('Modules', 'admin', 'hooks', array('id' => 0)))
+                                array(null, __('System hooks', $dom), ModUtil::url('Modules', 'admin', 'legacyhooks', array('id' => 0)))
                             )
                         ),
                         array(null, __('Hooks', $dom), '#',
@@ -123,10 +123,10 @@ function smarty_function_bt_adminlinks($params, &$smarty)
                         array(null, __('Themes', $dom),             ModUtil::url('Theme', 'admin')),
                         array(null, __('Security center', $dom),    ModUtil::url('SecurityCenter', 'admin', 'modifyconfig'),
                             array(
-                                array(null, __('Registered attacks', $dom), ModUtil::url('SecurityCenter', 'admin'))
+                                array(null, __('Registered attacks', $dom), ModUtil::url('SecurityCenter', 'admin', 'viewidslog'))
                             )
                         ),
-                        array(null, __('System information', $dom), ModUtil::url('SysInfo', 'admin'))
+                       // array(null, __('System information', $dom), ModUtil::url('SysInfo', 'admin'))
                     )
                 );
 
@@ -134,7 +134,7 @@ function smarty_function_bt_adminlinks($params, &$smarty)
         /* Users/Groups menu */
         // build the Users management submenu options
         $subusr   = array();
-        $subusr[] = array(null, __('Users settings', $dom), ModUtil::url('Users', 'admin', 'modifyconfig'));
+        $subusr[] = array(null, __('Users settings', $dom), ModUtil::url('Users', 'admin', 'config'));
 
         $profileModule = pnConfigGetVar('profilemodule', '');
         if (!empty($profileModule) && ModUtil::available($profileModule)) {
@@ -148,36 +148,36 @@ function smarty_function_bt_adminlinks($params, &$smarty)
                                 array(null, __('Groups settings', $dom), ModUtil::url('Groups', 'admin', 'modifyconfig'))
                             )
                         ),
-                        array(null, __('Manage users', $dom), ModUtil::url('Users', 'admin'),
+                        array(null, __('Manage users', $dom), ModUtil::url('Users', 'admin', 'config'),
                             $subusr
                         ),
-                        array(null, __('Create user', $dom),  ModUtil::url('Users', 'admin', 'new')),
+                        array(null, __('Create user', $dom),  ModUtil::url('Users', 'admin', 'newUser')),
                         array(null, __('Find and e-mail users', $dom), ModUtil::url('Users', 'admin', 'search'))
                     )
                 );
 
 
         /* Common Routines links */
-        $authidpnr = SecurityUtil::generateAuthKey('pnRender');
-        $authidthm = SecurityUtil::generateAuthKey('Theme');
-        $linkoptions = array(
-                           array(null, __('Template engine', $dom), ModUtil::url('pnRender', 'admin'),
-                               array(
-                                   array(null, __('Clear compiled templates', $dom), ModUtil::url('pnRender', 'admin', 'clear_compiled', array('authid' => $authidpnr))),
-                                   array(null, __('Clear pnRender cache', $dom),     ModUtil::url('pnRender', 'admin', 'clear_cache', array('authid' => $authidpnr)))
-                               )
-                           ),
-                           array(null, __('Theme engine', $dom), ModUtil::url('Theme', 'admin', 'modifyconfig'),
-                               array(
-                                   array(null, __('Clear compiled templates', $dom), ModUtil::url('Theme', 'admin', 'clear_compiled', array('authid' => $authidthm))),
-                                   array(null, __('Clear Theme cache', $dom),        ModUtil::url('Theme', 'admin', 'clear_cache', array('authid' => $authidthm)))
-                               )
-                           ),
-                           array(null, __('Filesystem check', $dom),       ModUtil::url('SysInfo', 'admin', 'filesystem')),
-                           array(null, __('Temporary folder check', $dom), ModUtil::url('SysInfo', 'admin', 'pntemp'))
-                       );
+        //$authidpnr = SecurityUtil::generateAuthKey('Render');
+        //$authidthm = SecurityUtil::generateAuthKey('Theme');
+        //$linkoptions = array(
+                           //array(null, __('Template engine', $dom), ModUtil::url('Theme', 'admin'),
+                              // array(
+                                 //  array(null, __('Clear compiled templates', $dom), ModUtil::url('Theme', 'admin', 'clear_compiled', array('csrftoken' => $csrftoken))),
+                                  // array(null, __('Clear pnRender cache', $dom),     ModUtil::url('Theme', 'admin', 'render_clear_complied', array('authid' => $authidpnr)))
+                               //)
+                           //),
+                          // array(null, __('Theme engine', $dom), ModUtil::url('Theme', 'admin', 'modifyconfig'),
+                              // array(
+                                  // array(null, __('Clear compiled templates', $dom), ModUtil::url('Theme', 'admin', 'clear_compiled', array('authid' => $authidthm))),
+                                 //  array(null, __('Clear Theme cache', $dom),        ModUtil::url('Theme', 'admin', 'clear_cache', array('authid' => $authidthm)))
+                              // )
+                          // ),
+                           //array(null, __('Filesystem check', $dom),       ModUtil::url('SysInfo', 'admin', 'filesystem')),
+                          // array(null, __('Temporary folder check', $dom), ModUtil::url('SysInfo', 'admin', 'pntemp'))
+                      // );
 
-        $menu[] = array('routines', __('Routines', $dom), '#', $linkoptions);
+       // $menu[] = array('routines', __('Routines', $dom), '#', $linkoptions);
 
 
     } /* Permission Admin:: | :: | ACCESS_EDIT ends here */
