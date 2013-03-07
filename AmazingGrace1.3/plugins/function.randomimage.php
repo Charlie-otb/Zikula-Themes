@@ -60,7 +60,7 @@ function smarty_function_randomimage($params, &$smarty)
 	unset($params);
 	
 	// change the path if necessary
-	$directory = 'themes/AmazingGrace/images';	
+	$directory = 'themes/AmazingGrace1.3/images';	
 	
 	// add as many as you like
 	$images = array($directory.'/bg-portrait1.jpg',
